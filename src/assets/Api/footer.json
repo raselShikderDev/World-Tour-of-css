@@ -1,0 +1,20 @@
+[
+    {
+        "id":"1",
+        "icon": "MdPlace",
+        "title": "Find Us",
+        "details": "Dhaka, Bangladesh"
+    },
+    {
+        "id":"2",
+        "icon": "IoCallSharp",
+        "title": "Call Us",
+        "details": "01234567890"
+    },
+    {
+        "id":"3",
+        "icon": "IoIosMail",
+        "title": "Mail Us",
+        "details": "contact@rasel.com"
+    }
+]

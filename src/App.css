@@ -1,0 +1,983 @@
+@import url("../src/assets/Fonts/UrbanistFont.css");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  background-color: #000;
+  color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Urbanist", system-ui;
+}
+
+body {
+  background: #000;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #fff;
+}
+
+button {
+  font-size: 1.7rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.6rem;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  &:hover {
+    color: #2e86c1;
+  }
+}
+
+.active {
+  color: #2e86c1;
+}
+
+.container > h2 {
+  font-size: 5rem;
+  padding: 0.5rem 0 2.5rem 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.container > h2::after {
+  content: "";
+  display: block;
+  width: 15rem;
+  height: 1px;
+  margin: auto;
+  background: #5c5b5b;
+}
+
+/* ------- Layout ------- */
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.align-start {
+  align-items: start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: end;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+/* ------- header Styles ------- */
+header {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #1e1e1e;
+  position: relative;
+  box-shadow: 0px 1.5px 6.5px rgba(255, 255, 255, 0.2);
+}
+
+.logoSection div .logo {
+  color: #fff;
+  font-size: 2.5rem;
+  text-decoration: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 700;
+  &:active {
+    color: #2e86c1;
+  }
+}
+
+.navBarSection {
+  ul {
+    gap: 2rem;
+    li {
+      .navBarLink {
+        font-size: 15px;
+        text-decoration: none;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.hamburger-Menu {
+  display: none;
+  button {
+    background-color: transparent;
+    border: none;
+    .toogleHamburger {
+      font-size: 2rem;
+    }
+  }
+}
+
+.mobile-view-nav {
+  display: none;
+}
+
+.view-on {
+  display: block;
+}
+
+.view-off {
+  display: none;
+}
+
+/* ------- Hero Section ------- */
+.heroSection {
+  padding: 1.5rem;
+  width: 100%;
+  .hero-container {
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .hero-info {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-right: 2rem;
+    h2 {
+      font-size: 4rem;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 15px;
+      margin-bottom: 1.5rem;
+    }
+    a {
+      font-size: 15px;
+      margin: 1rem 0;
+      padding: 0.8rem 1.3rem;
+      background-color: rgb(3, 186, 186);
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+      font-weight: 600;
+      &:hover,
+      &:focus-visible {
+        color: #fff;
+      }
+      &:active {
+        color: #d1cfcf;
+        background-color: rgb(2, 151, 151);
+      }
+    }
+  }
+  .hero-img {
+    width: 100%;
+    height: 42rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/* ------- About Section ------- */
+.about-section {
+  padding: 4rem;
+  font-size: 14px;
+  .container {
+    h2 {
+      text-align: center;
+      margin: 2rem 0 0 0;
+      font-size: 3.5rem;
+    }
+  }
+}
+
+.about-section .container > h2::after {
+  display: none;
+}
+
+.card-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding: 3rem;
+}
+.about-card {
+  background: linear-gradient(#0202da16, #56b8fa18);
+  border: 0.5px solid #282828c1;
+  border-radius: 1rem 3rem 1rem 3rem;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.1rem;
+  }
+  p {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    span {
+      color: #d5d1d1;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* ------- Contact Section ------- */
+.contactSection {
+  padding: 3rem 0;
+}
+
+.contactSection .container > h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.contactSection .container form {
+  width: 100%;
+  margin: auto;
+  padding: 2rem 4rem;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+.contactSection .container form input,
+textarea {
+  padding: 0.8rem 0 0.5rem 0.4rem;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  /* background: linear-gradient(rgba(2, 2, 218, 0.056), rgba(86, 184, 250, 0.054)); */
+  background: #201f1fa3;
+  color: #fff;
+  caret-color: #d1cfcf;
+  width: 40%;
+  margin: auto;
+}
+
+.ContactFromBtn {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.contactSection .container form button {
+  font-size: 14px;
+  border: none;
+  outline: none;
+  padding: 1rem 3rem;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: "Urbanist", system-ui;
+  font-weight: 500;
+}
+
+.contactSection .container form button[type="submit"] {
+  background-color: rgba(96, 251, 29, 0.35);
+  margin-right: 1rem;
+  &:hover {
+    background: rgba(96, 251, 29, 0.644);
+  }
+  &:active {
+    background: rgba(96, 251, 29, 0.868);
+  }
+}
+
+.contactSection .container form button[type="reset"] {
+  background-color: rgb(248, 3, 3, 0.35);
+  &:hover {
+    background: rgba(248, 3, 3, 0.594);
+  }
+  &:active {
+    background: rgba(248, 3, 3, 0.845);
+  }
+}
+
+/* ------- Country Section starts ------- */
+.countrySection {
+  padding: 3rem;
+}
+
+.countrySection .container h2 {
+  font-size: 4rem;
+}
+
+.countrySection .container .country-Cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1rem 2rem;
+}
+
+.countrySection .container .country-Cards .country-Card {
+  width: 100%;
+  padding: 3rem 2rem;
+  border: 0.5px solid #807f7f;
+  border-radius: 3rem;
+  background: linear-gradient(
+    90deg,
+    rgba(42, 42, 43, 0.7) 0%,
+    rgba(23, 23, 49, 0.5) 49%,
+    rgba(41, 43, 43, 0.5) 100%
+  );
+  box-shadow: 0px 1px 4px 1px rgba(97, 97, 97, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.countrySection .container .country-Cards .country-Card img {
+  max-width: 40rem;
+  width: 100%;
+  height: 16rem;
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+
+.card-text {
+  font-size: 14px;
+  align-self: flex-start;
+  h2 {
+    font-size: 3rem;
+    padding: 0.5rem 0 1rem 0;
+    font-weight: 500;
+  }
+  p {
+    font-weight: 500;
+    padding: 0.5rem;
+    span {
+      color: #807f7f;
+      font-weight: 400;
+    }
+  }
+  .btnMore {
+    margin-top: 1.5rem;
+  }
+  .exploreBtn {
+    border: none;
+    background: transparent;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0.7rem 2rem;
+    border: 0.3px solid #807f7f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 2rem;
+    transition: 0.2s ease-in;
+    &:hover {
+      background: #0290ee;
+      border: none;
+    }
+    &:active {
+      background: #015187;
+      border: none;
+    }
+  }
+}
+
+/* --- Filter & Search --- */
+.filter_Search_Section {
+  width: 90%;
+  margin: auto;
+  padding: 0 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 5rem 0;
+}
+
+.searchFeild, select {
+  background: #201f1fa3;
+  color: #fff;
+  caret-color: #d1cfcf;
+  border: none;
+  padding: 0.9rem 1rem;
+  border-radius: 5px;
+}
+
+.filterFeild {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ------ Single Country ------- */
+.singleCountry {
+  padding: 4rem 0;
+  width: 100%;
+}
+.card-container {
+  width: 96%;
+  margin: auto;
+  padding: 3rem 2rem;
+  background: linear-gradient(71deg, #080509, #1a171c, #080509);
+  display: grid;
+  grid-template-columns: repeat(2, 0.9fr);
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4rem;
+  border: 0.5px solid #28282870;
+}
+
+.imgSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  div {
+    img {
+      max-width: 35rem;
+    }
+  }
+}
+
+.info-single-country {
+  h3 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+  p {
+    font-size: 14px;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    span {
+      font-weight: 400;
+      color: #b9b7b7;
+    }
+  }
+  .backSectionDetails {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    .backBtn {
+      border: none;
+      background: transparent;
+      text-align: end;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 0.7rem 2rem;
+      border: 0.3px solid #807f7f;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 2rem;
+      transition: 0.2s ease-in;
+      &:hover {
+        background: #0290ee;
+        border: none;
+      }
+      &:active {
+        background: #015187;
+        border: none;
+      }
+    }
+  }
+}
+
+/* ------- footer Styles ------- */
+.footer {
+  background-color: #202020;
+  padding: 1rem 0;
+}
+.IconFooter {
+  font-size: 2.5rem;
+  color: #2e86c1;
+  margin-top: 0.4rem;
+}
+
+footer {
+  padding: 1rem 0;
+  font-size: 12px;
+}
+
+footer .container {
+  width: 90%;
+  margin: auto;
+}
+
+.borderBottomFooter {
+  border-top: 0.2px solid rgb(54, 53, 53);
+  margin-top: 1rem;
+}
+
+footer .footerNav ul {
+  gap: 2rem;
+  justify-content: flex-end;
+}
+
+.FooterInfo h4 {
+  font-size: 15px;
+}
+
+.FooterInfo p {
+  font-size: 14px;
+}
+
+.footer-Cards {
+  align-items: center;
+  .footer-Card {
+    justify-content: center;
+  }
+  .footer-Card:first-child {
+    justify-content: flex-start;
+  }
+  .footer-Card:last-child {
+    justify-content: flex-end;
+  }
+}
+
+.copyrightSection p {
+  color: #d1cfcf;
+  a {
+    text-decoration: none;
+    color: #2e86c1;
+  }
+}
+
+footer .footerNav ul li a {
+  text-decoration: none;
+  color: #d1cfcf;
+}
+
+/* ------- Error Page ------- */
+
+.erorPage {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.erorPage-container {
+  align-self: center;
+  text-align: center;
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  p {
+    margin-bottom: 2rem;
+    font-size: 13px;
+  }
+  .homeBtn {
+    border: none;
+    background: transparent;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0.7rem 2rem;
+    border: 0.3px solid #807f7f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 2rem;
+    transition: 0.2s ease-in;
+    margin-top: 1.5rem;
+    &:hover {
+      background: #0290ee;
+      border: none;
+    }
+    &:active {
+      background: #015187;
+      border: none;
+    }
+  }
+}
+
+/* ------- Loaders ------- */
+.loaderSection {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loaderSection .loaderCard {
+  align-self: center;
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 6px;
+  background: conic-gradient(from 135deg at top, currentColor 90deg, #0000 0) 0
+      calc(50% - 4px) / 17px 8.5px,
+    radial-gradient(
+        farthest-side at bottom left,
+        #0000 calc(100% - 6px),
+        currentColor calc(100% - 5px) 99%,
+        #0000
+      )
+      top right/50% 50% content-box content-box,
+    radial-gradient(
+        farthest-side at top,
+        #0000 calc(100% - 6px),
+        currentColor calc(100% - 5px) 99%,
+        #0000
+      )
+      bottom / 100% 50% content-box content-box;
+  background-repeat: no-repeat;
+  animation: l11 1s infinite linear;
+}
+@keyframes l11 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+/* ------- Medaia Queries Statrs from bellow ------- */
+
+@media screen and (max-width: 990px) {
+  html {
+    font-size: 35%; /* Reduces base font size for smaller screens (8px) */
+  }
+  /* ------- Hero Section ------- */
+  .heroSection {
+    padding-top: 10rem;
+  }
+  .hero-info-button {
+    font-size: 12px;
+    background-color: #2e86c1;
+  }
+
+  /* ------- contact Section ------- */
+  .contactSection {
+    padding: 3rem 0;
+  }
+
+  .contactSection .container > h2 {
+    font-size: 4.5rem;
+  }
+
+  .contactSection .container form input,
+  textarea {
+    height: auto;
+    width: 50%;
+    margin: auto;
+  }
+
+  /* ------- Country Section starts ------- */
+  .container > h2 {
+    font-size: 4rem;
+  }
+
+  .container > h2::after {
+    width: 12rem;
+    height: 0.5px;
+  }
+
+  .countrySection .container .country-Cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+    padding: 1.5rem 5rem;
+  }
+
+  .countrySection .container .country-Cards .country-Card {
+    padding: 8rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .countrySection .container .country-Cards .country-Card img {
+    max-width: 33rem;
+  }
+
+  .card-text {
+    align-self: flex-start;
+  }
+
+  .card-text button {
+    padding: 1.2rem 2rem;
+  }
+}
+
+/* ------ Single Country ------- */
+.singleCountry {
+  padding: 4rem 0;
+  width: 100%;
+}
+.card-container {
+  align-items: center;
+}
+
+.imgSection {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; */
+  div {
+    img {
+      max-width: 30rem;
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  html {
+    font-size: 38%; /* Reduces base font size for smaller screens (8px) */
+  }
+  /* ------- Headrer Section -------*/
+  .mobile-view-nav {
+    position: absolute;
+    background: #1e1e1e;
+    width: 100%;
+    top: 5rem;
+    left: 0rem;
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 0.2px solid rgb(65, 63, 63);
+  }
+
+  .mobile-view-nav li {
+    margin-bottom: 0.6rem;
+    .navBarLink {
+      color: #fff;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 15px;
+      &:active {
+        color: #2e86c1;
+      }
+      &:hover {
+        color: #2e86c1;
+      }
+      &:focus-visible {
+        color: #2e86c1;
+      }
+    }
+    .mobile-view-nav li {
+      margin-bottom: 0;
+    }
+  }
+
+  .web-view {
+    display: none;
+  }
+  .hamburger-Menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  /* ------- Hero sectoion starts ------- */
+  .heroSection {
+    padding-top: 12rem;
+  }
+  .hero-container {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: stretch;
+
+    .hero-info {
+      width: 100%;
+      h2 {
+        font-size: 5rem;
+      }
+    }
+
+    .hero-img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  /*------- About Section starts ------- */
+  .about-section {
+    margin-top: 6rem;
+  }
+  .card-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* ------- Contact section ------- */
+  contactSection .container form {
+    width: 90%;
+    background-color: #2e86c1;
+    font-size: 13px;
+  }
+
+  .contactSection .container form input,
+  textarea {
+    height: auto;
+    width: 80%;
+    margin: auto;
+  }
+
+  /* ------- Country Section starts ------- */
+  .countrySection .container {
+    width: 80%;
+  }
+
+  .container > h2 {
+    font-size: 3rem;
+  }
+
+  .container > h2::after {
+    width: 10rem;
+    height: 0.5px;
+  }
+
+  .countrySection .container .country-Cards {
+    grid-template-columns: 1fr;
+  }
+
+  .countrySection .container .country-Cards {
+    padding: 2rem 3rem;
+  }
+
+  .countrySection .container .country-Cards .country-Card {
+    padding: 7rem 5rem;
+  }
+
+  .countrySection .container .country-Cards .country-Card img {
+    max-width: 30rem;
+  }
+
+  .card-text button {
+    padding: 1.2rem 2rem;
+  }
+
+  /* ------ Single Country ------- */
+  .singleCountry {
+    padding: 4rem 0;
+    width: 100%;
+  }
+  .card-container {
+    width: 84%;
+    padding: 4rem 3rem;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imgSection {
+    margin-bottom: 3rem;
+  }
+
+  .info-single-country p {
+    margin-bottom: 1.5rem;
+  }
+
+  /* --- Filter & Search --- */
+.filter_Search_Section {
+  grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.infutFeild{
+ text-align:  center;
+ margin: 0 0 1rem 1rem;
+}
+
+.filterFeild {
+ justify-content: center;
+}
+
+  /* ------- Footer Section ------- */
+  .footer-Cards {
+    width: 80%;
+    margin: auto;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    .footer-Card {
+      width: 50%;
+      margin: auto;
+      justify-content: flex-start;
+    }
+    .footer-Card:first-child {
+      justify-content: flex-start;
+    }
+    .footer-Card:last-child {
+      justify-content: flex-start;
+    }
+  }
+
+  .bottomFooter {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    .copyrightSection {
+      text-align: center;
+    }
+    .footerNav {
+      display: none;
+    }
+  }
+}
